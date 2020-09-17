@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Directory from './components/DirectoryComponent';
 import './App.css';
+import { ENTREPRENEURS } from './shared/entrepreneurs';
 
 class App extends Component {
+    constructor(props) {
+        super(props); 
+        this.state = {
+            entrepreneurs: ENTREPRENEURS
+        };
+    }
     render() {
         return (
             <div className="App">
@@ -12,7 +19,7 @@ class App extends Component {
                     <NavbarBrand href="/">Directory of Wisconsin Women Entrepreneurs</NavbarBrand>
                 </div>
                 </Navbar>
-                <Directory />
+                <Directory entrepreneurs={this.state.entrepreneurs} />
             </div>
         );
     }
