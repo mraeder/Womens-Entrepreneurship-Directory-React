@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Directory from './components/DirectoryComponent';
 import './App.css';
-import { ENTREPRENEURS } from './shared/entrepreneurs';
+import { ENTREPRENEURS } from './shared/entrepreneurs';       // imports entrepreneurs.js
 
 class App extends Component {
-    constructor(props) {
+    constructor(props) {                   // now we have data from entrepreneurs.js inside of App state 
         super(props); 
         this.state = {
             entrepreneurs: ENTREPRENEURS
